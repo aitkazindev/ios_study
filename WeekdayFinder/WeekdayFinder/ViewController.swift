@@ -28,6 +28,7 @@ class ViewController: UIViewController {
                 
         guard let date = calendar.date(from: dateComponents) else{return}
         let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_En")
         dateFormatter.dateFormat = "EEEE"
 
         let weekday = dateFormatter.string(from: date)
